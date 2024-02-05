@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package thing;
+
+import "google/protobuf/struct.proto";
+
+option java_multiple_files = true;
+option java_package = "com.thing";
+
+message Thing {
+  string s = 1;
+  EnumSample e = 2;
+  google.protobuf.Struct str = 3;
+}
+
+enum EnumSample {
+  ENUM_SAMPLE_UNSPECIFIED = 0;
+  ENUM_SAMPLE_INVALID = 1;
+  ENUM_SAMPLE_VALID = 2;
+}
